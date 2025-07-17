@@ -11,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/me", {
+        const res = await axios.get("https://capstone-doubtsync.onrender.com/me", {
           withCredentials: true,
         });
         setUser(res.data.user);

@@ -19,7 +19,7 @@ const Login = ({ setUser }) => {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8080/login",
+        "https://capstone-doubtsync.onrender.com/login",
         { email, password },
         { withCredentials: true }
       );
@@ -38,7 +38,7 @@ const Login = ({ setUser }) => {
 
       socket.emit("register_socket", { userId: loginUser.id });
 
-      const fullUserRes = await axios.get(`http://localhost:8080/user/${loginUser.id}`);
+      const fullUserRes = await axios.get(`https://capstone-doubtsync.onrender.com/user/${loginUser.id}`);
       const fullUser = fullUserRes.data.user;
 
       setTimeout(() => {

@@ -32,7 +32,7 @@ const Signup = () => {
 
     try {
       const formData = { name, email, password, role };
-      await axios.post("http://localhost:8080/signup", formData);
+      await axios.post("https://capstone-doubtsync.onrender.com/signup", formData);
       alert("Signup successful. You can now login.");
       navigate(`/login/${role}`);
     } catch (err) {

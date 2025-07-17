@@ -22,7 +22,7 @@ const Profile = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/user/${userId}`);
+      const res = await axios.get(`https://capstone-doubtsync.onrender.com/user/${userId}`);
       setUser(res.data.user);
     } catch (err) {
       console.error("Failed to fetch user:", err);
@@ -35,7 +35,7 @@ const Profile = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:8080/user/${userId}`, user);
+      await axios.put(`https://capstone-doubtsync.onrender.com/user/${userId}`, user);
       setEditMode(false);
       alert("Profile updated successfully");
     } catch (err) {

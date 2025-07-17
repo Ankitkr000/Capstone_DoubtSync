@@ -80,7 +80,7 @@ useEffect(() => {
       interval = setInterval(async () => {
         try {
           await axios.post(
-            "http://localhost:8080/try-assign-teacher",
+            "https://capstone-doubtsync.onrender.com/try-assign-teacher",
             { doubtId: roomId },
             { withCredentials: true }
           );
@@ -106,7 +106,7 @@ useEffect(() => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/ask-doubt",
+        "https://capstone-doubtsync.onrender.com/ask-doubt",
         {
           question,
           subject: selectedSubject,

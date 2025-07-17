@@ -23,7 +23,7 @@ const StudentNavBar = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/logout", {}, {
+      const res = await axios.post("https://capstone-doubtsync.onrender.com/logout", {}, {
         withCredentials: true
       });
 

@@ -25,7 +25,7 @@ const TeacherSkillSelect = () => {
 
   const handleSaveSkills = async () => {
     try {
-      await axios.put(`http://localhost:8080/user/${userId}`, { subjects });
+      await axios.put(`https://capstone-doubtsync.onrender.com/user/${userId}`, { subjects });
       alert("Skills saved!");
       navigate("/teacher-dashboard");
     } catch (err) {

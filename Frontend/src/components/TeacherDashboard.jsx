@@ -21,7 +21,7 @@ const TeacherDashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/user/${userId}`);
+        const res = await axios.get(`https://capstone-doubtsync.onrender.com/user/${userId}`);
         const user = res.data.user;
         setSubjects(user.subjects || []);
         setIsAvailable(user.isAvailable);
@@ -89,7 +89,7 @@ socket.on("doubt_taken", ({ doubtId }) => {
   const toggleAvailability = async () => {
     try {
       const updatedStatus = !isAvailable;
-      await axios.put(`http://localhost:8080/user/${userId}`, {
+      await axios.put(`https://capstone-doubtsync.onrender.com/user/${userId}`, {
         isAvailable: updatedStatus,
       });
       setIsAvailable(updatedStatus);
